@@ -1,0 +1,414 @@
+:root {
+    --primario: #1073bA;
+    --secundario: #00DA55;
+    --gris: #3B3B3B;
+    --blanco: #ffffff;
+    --negro: #1F1E1E;
+    --grisClaro: #e1e1e1;
+    --fuentePrincipal: 'Roboto' , Sans-Serif;
+    --fuenteSecundaria: 'Lato' , Sans-Serif;
+    --fuenteRetro: 'Times New Roman', Times, serif;
+    --fuentrRetro2: Arial, Helvetica, sans-serif;
+    --separacion: 5rem;
+    
+}
+html {
+    scroll-behavior: inherit;
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-family: var(--fuenteRetro);
+    line-height: 1.5;
+    font-size: 1.6rem;
+    background-color: var(--grisClaro);
+  }
+
+/* Globales */ 
+.contenedor {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}  
+
+h1,h2,h3 {
+  font-weight: 900;
+  font-family: var(--fuenteSecundaria);
+  margin: calc( var(--separacion) /2 ) 0;
+}
+h1 {
+  font-size: 4.4rem;
+}
+h2{
+  font-size: 3.6rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+
+/* Utilidades */ 
+.text-center {
+  text-align: center;
+}
+/* Degradados */ 
+.degradado-verde {
+  color: transparent;
+  background: linear-gradient(to right , #32B957 0% , #F4D03F 50% , #DC7633 ,  #D8251D,  purple ,#0076FF );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+/* Navegacion */
+.header-navegacion {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+.logo {
+  width: 10rem;
+}
+
+/* Header */ 
+.header {
+  background-color: var(--grisClaro);
+  padding: 13rem 0rem;
+  color: var(--negro);
+}
+@media (min-width:768px) {
+  .contenido-header {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+.texto-header {
+  text-align: center;
+}
+@media (min-width:768px) {
+  .texto-header {
+    text-align: left;
+    margin: 0;
+    line-height: 1 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.tagline-producto {
+  font-size: 3rem;
+}
+.nombre-producto {
+  font-size: 6rem;
+  margin: 0;
+}
+@media (min-width:768px) {
+  .nombre-producto {
+    font-size: 10rem;
+    margin: 0;
+    line-height: 1;
+  }
+}
+.precio-producto {
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 0;
+}
+.precio-producto span {
+  font-size: 6rem;
+}
+.descripcion-producto {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+/* Caracteristicas productos */ 
+.caracteristicas {
+  background-color: var(--grisClaro);
+  padding: 2rem;
+}
+@media (min-width:768px) {
+  .contenedor-caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-content: center;
+    
+  }
+}
+.columna img {
+  width: 7rem;
+}
+.columna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem;
+  text-align: center;
+}
+.columna p {
+  font-size: 2rem;
+  text-align: center;
+}
+.columna h2 {
+  margin: 0;
+ font-family: var(--fuenteRetro);
+ font-size: 4rem;
+}
+/* Acerca de la macintosh */
+
+@media (min-width:768px) {
+  .sobre-mac-grid {
+    display: flex;
+    gap: 13rem;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    padding: 7rem;
+    
+  }
+}
+.imagen-mac img {
+  width: 130rem;
+}
+.texto-sobre-mac h3 {
+  font-size: 3rem;
+  font-family: var(--fuenteRetro);
+}
+.texto-sobre-mac p {
+  font-size: 1.9rem;
+  line-height: 2;
+  font-family: var(--fuenteRetro);
+}
+.titulo-mac {
+  font-size: 6.5rem ;
+  color: transparent;
+  background: linear-gradient(to right , #32B957 0% , #F4D03F 50% , #DC7633 ,  #D8251D,  purple ,#0076FF );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Productos */ 
+.productos {
+  padding: 3rem;
+}
+.productos h4 {
+  text-align: center;
+  font-size: 5.5rem;
+  font-family: var(--fuenteRetro);
+color: purple;
+}
+.contenedor-productos {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media (min-width:768px) {
+  .contenedor-productos  {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10rem;
+  
+  }
+}
+.precio {
+  font-size: 2.4rem;
+  margin: 0;
+  text-align: center;
+}
+.modelo {
+  margin-bottom: 1rem;
+  background-color:  #D0D3D4  ;
+  padding: 3rem;
+  border-radius: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.modelo h3 {
+  margin: 0;
+  text-align: center;
+  font-family: var(--fuenteRetro);
+  font-size: 3rem;
+}
+.modelo h3::after {
+  content: "";
+  display: inline-block;
+  width: 4rem; 
+  height: 4rem; 
+  background-image: url(img/logo-apple-removebg-preview.png);
+  background-size: cover;
+  margin-right: 10px; 
+  display: flex;
+  margin: 0 auto;
+}
+.modelo img {
+  width: 60rem;
+  height: auto;
+}
+.modelo a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: purple;
+  padding: 1rem;
+  color: #fff;
+  border-radius: 1rem;
+  font-family: var(--fuenteRetro);
+
+}
+.modelo a:hover {
+  cursor: pointer;
+  background-color: var(--grisClaro);
+  color: purple;
+}
+@media (min-width:768px) {
+  .modelo img   {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Newsletter */ 
+
+@media (min-width:768px) {
+  .contenido-newsletter   {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    padding: 7rem;
+  }
+}
+.texto-newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 6rem;
+}
+.texto-newsletter h2 {
+  font-size: 4.3rem;
+  font-family: var(--fuenteRetro);
+  margin: 0;
+ 
+}
+.texto-newsletter p {
+  font-size: 2rem;
+}
+.formulario input[type="text"] {
+  padding: 1rem;
+  font-size: 1.7rem;
+  border-radius: 1rem;
+  border: none;
+  width: 100%;
+  text-align: center;
+}
+.formulario input[type="submit"] {
+  margin-top: 2rem;
+  background-color: purple;
+  color: var(--grisClaro);
+  font-size: 2.8rem;
+  font-family: var(--fuenteRetro);
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+.formulario input[type="submit"]:hover {
+  background-color: var(--grisClaro);
+  cursor: pointer;
+  color: purple;
+}
+
+/* footer */ 
+.footer {
+  padding: 2rem 0;
+}
+.footer p {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 2rem;
+}
+.footer p::after {
+  content: "";
+  display: inline-block;
+  width: 4rem; 
+  height: 4rem; 
+  background-image: url(img/logo-apple-removebg-preview.png);
+  background-size: cover;
+  margin-right: 10px; 
+  display: flex;
+  margin: 0 auto;
+}
+/********** carrito ****************/ 
+.submenu {
+  position: relative;
+}
+
+.submenu #carrito{
+  display: none;
+}
+.submenu:hover #carrito{
+  display: block;
+  position: absolute;
+  right:0;
+  top:100%;
+  z-index: 1;
+  background-color: white;
+  padding: 20px;
+  min-height: 400px;
+  min-width: 300px;
+}
+#img-carrito img {
+  cursor: pointer;
+  height: 5rem;
+  width: 5rem;
+}
+.submenu img {
+  cursor: pointer;
+  width: 3.4rem;
+  height: 3.4rem;
+  margin-top: 3rem;
+}
+
+
+.carrito-table th {
+ padding-left: 1rem;
+ padding-right: 2rem;
+  margin-left: 0;
+  color: var(--gris);
+ font-size: 2rem;
+}
+.vaciar-carrito {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  background-color: purple;
+  color: var(--blanco);
+  font-size: 2rem;
+}
+.borrar-producto {
+  background-color: purple;
+  padding: 1rem;
+  color: white;
+  border-radius: 1rem;
+}
+
